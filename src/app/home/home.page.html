@@ -1,20 +1,45 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ola mundo</strong>
-    <p>Aqui é o home <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  
+  <div>
+    <div class="fundo"></div>
+     
+      <div class="container" class="login" >  
+          <div class="centro">
+          <div class="row"  >
+            <div class="col" style="text-align: center; margin-top: -30px; ">
+              <h1 style="font-family: 'Roboto', sans-serif; text-transform: uppercase; outline: 0;">Login</h1>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col">
+              <ion-item>
+                <ion-input type="email" placeholder="E-mail" class="input" ></ion-input>
+              </ion-item>
+            </div>
+          </div>
+    
+          <div class="row">
+          <div class="col">
+            <ion-item>
+              <ion-input type="password" placeholder="Senha" class="input" ></ion-input>
+            </ion-item>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col">
+            <ion-item>
+              <ion-button (click)="login()" class="butao" expand="full">
+                Entrar
+              </ion-button>
+            </ion-item>
+          </div>
+        </div>
+        </div>
+    
+      </div>
+    
   </div>
+   
 </ion-content>
