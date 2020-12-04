@@ -32,7 +32,7 @@
   width:500px;
   height: 400px;
   margin:auto;
-  margin-top: 40px;
+  margin-top: 35px;
   padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -41,7 +41,7 @@
 .centro
 {
 
-  margin-top:20px;
+  margin-top:40px;
 
 }
 
@@ -52,14 +52,16 @@
    --background: #f2f2f2;
     width: 90%;
     --border: 0;
-    margin-top: 15px;
+    margin-top: 10px;
    --margin: 0 0 20px;
     --padding-bottom: 20px;
     --box-sizing: border-box;
     --font-size: 14px;
-    --padding: 20px ;
+    --padding-end: 20px ;
+    --padding-start: 20px ;
     --margin: 4%;
-     text-align:left;
+    text-align:left;
+      
   }
   
 .butao
@@ -69,8 +71,10 @@
     --outline: 0;
     --background: #4CAF50;
     --border-radio:0px;
-    --width: 500px;
+    width: 500px;
+    height: 50px;
     --border: 0;
+      margin-top:10px;
     --padding-end: 15px;
     --padding-start: 15px;
     --color: #FFFFFF;
@@ -78,7 +82,7 @@
     --webkit-transition: all 0.3 ease;
     --transition: all 0.3 ease;
     --cursor: pointer;
-    text-align:center;
+      text-align:center;
   }
   
 .butao:hover,.butao:active,.butao:focus 
@@ -87,11 +91,15 @@
   }
   
 
-
-
 .input:active{
 
   --background-color:  #b6b6b6; 
+
+}
+
+.link{
+
+  font-size: 40px;
 
 }
 
@@ -143,7 +151,7 @@
   
   .centro{
 
-      margin-top: 30px;
+      margin-top: 25px;
 
   }
 
@@ -154,7 +162,7 @@
    --background: #f2f2f2;
     width: 90%;
     --border: 0;
-    margin-top: 15px;
+    margin-top: 10px;
    --margin: 0 0 20px;
     --padding-bottom: 20px;
     --box-sizing: border-box;
@@ -176,6 +184,7 @@
     width: 500px;
     height: 50px;
     --border: 0;
+    margin-top:10px;
     --padding-end: 15px;
     --padding-start: 15px;
     --color: #FFFFFF;
@@ -200,6 +209,12 @@
 
 }
 
+.link{
+
+  font-size: 15px;
+  margin-top: 10px;
+
+}
 
 
 

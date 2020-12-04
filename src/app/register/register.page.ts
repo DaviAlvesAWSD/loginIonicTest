@@ -3,44 +3,48 @@ import { LoadingController, ToastController } from '@ionic/angular';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from '../services/auth.service';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-register',
+  templateUrl: './register.page.html',
+  styleUrls: ['./register.page.scss'],
 })
-export class HomePage implements OnInit {
+export class RegisterPage implements OnInit {
 
-  public userLogin: User = {};
+  public userRegister: User = {};
   private loading: any;
 
+  // aqui eu passo os parametros de auth
+  // da tela de carregamento
+  // e da mensagem de erro
   constructor(
     private authService: AuthService,
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
-  ){}
+  ) { }
 
-  ngOnInit(){}
+  ngOnInit() 
+  { }
 
-  async login() {
+// esse methodo faz o registro do usuario  e
+//faz um tratamento dos erros
+async register()
+{
 
-    await this.presentLoading();
+  await this.presentLoading();
 
+  try{
+    await this.authService.register(this.userRegister);
+  }catch(error ){
+    console.error(error);
     
-    try{
-      await this.authService.login(this.userLogin);
-    }catch(error ){
-      console.error(error);
-      
-      this.presentToast(error.message);
-      
-    }finally{
-        this.loading.dismiss();
-    }
-  
-
+    this.presentToast(error.message);
+    
+  }finally{
+      this.loading.dismiss();
   }
+ 
 
+}
 
 // esse metodo é a caixinha de carregamento
 // enquanto o sistema confere os dados
@@ -55,5 +59,7 @@ async presentToast(message: string) {
   const toast = await this.toastCtrl.create({ message, duration: 2000 });
   toast.present();
 }
+
+  
 
 }

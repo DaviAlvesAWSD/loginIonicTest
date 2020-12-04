@@ -1,20 +1,20 @@
-<ion-content [fullscreen]="true">
-  
+<ion-content>
+
   <div>
     <div class="fundo"></div>
      
-      <div class="container" class="login" >  
+      <div class="container" class="register" >  
           <div class="centro">
           <div class="row"  >
             <div class="col" style="text-align: center; margin-top: -30px; ">
-              <h1 style="font-family: 'Roboto', sans-serif; text-transform: uppercase; outline: 0;">Login</h1>
+              <h1 style="font-family: 'Roboto', sans-serif; text-transform: uppercase; outline: 0;">Registrar</h1>
             </div>
           </div>
     
           <div class="row">
             <div class="col">
               <ion-item>
-                <ion-input type="email" placeholder="E-mail" class="input" [(ngModel)]="userLogin.email"></ion-input>
+                <ion-input type="email" placeholder="E-mail" class="input" [(ngModel)]="userRegister.email"></ion-input>
               </ion-item>
             </div>
           </div>
@@ -22,7 +22,7 @@
           <div class="row">
           <div class="col">
             <ion-item>
-              <ion-input type="password" placeholder="Senha" class="input" [(ngModel)]="userLogin.password"></ion-input>
+              <ion-input type="password" placeholder="Senha" class="input" [(ngModel)]="userRegister.password"></ion-input>
             </ion-item>
           </div>
         </div>
@@ -30,15 +30,15 @@
         <div class="row">
           <div class="col">
             <ion-item>
-              <ion-button class="butao" (click)="login()" expand="full" >
-                Entrar
+              <ion-button class="butao" (click)="register()" expand="full" >
+                Enviar
               </ion-button>
             </ion-item>
           </div>
         </div>
 
         <div>
-          <p class="link"><label for="">Não é cadastrado ainda?<a href="register">Cadastre-se</a></label></p>
+          <p class="link"><label for="">Já possuiu uma conta?<a href="home">Entrar</a></label></p> 
         </div>
 
 
@@ -47,5 +47,7 @@
       </div>
     
   </div>
-   
+
+
+
 </ion-content>
